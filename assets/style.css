@@ -13,14 +13,13 @@ html, body {
     color: #fff;
  }
 
-#miniCircle { width: 12px; height: 12px; background-color: #fff; position: absolute; z-index: 9; border-radius: 50%; transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s; }
+#miniCircle { width: 12px; height: 12px; background-color: #fff; position: absolute; z-index: 999; border-radius: 50%; transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s; }
 #miniCircle.link { width: 50px;height: 50px;display: grid;place-items: center;transform: translate(50%, -50%); }
+#miniCircle.link::after { content: 'View'; }
 /* .underlineEffect { position: relative;z-index: 10; } */
 /* .underlineEffect::before { content:''; position: absolute;z-index: 10;;height: 1.5px; left: 0; right: 100%; bottom: -2px; background-color: #fff;transition: all .5s ease-in-out; } */
 /* .underlineEffect:hover::before { right: 0; } */
 
-#miniCircle.link::after { content: 'View'; }
-#work .elem:hover + #miniCircle { background-color: red; }
 #main { width: 100%; height: auto; }
 /* section { background-color: #000; width: 100%; color: #fff; } */
 
