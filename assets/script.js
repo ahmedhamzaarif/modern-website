@@ -59,7 +59,11 @@ function skewCircle() {
 }
 function circleMouseFollower(xscale, yscale) {
     window.addEventListener("mousemove", function (dets) {
-        document.querySelector("#miniCircle").style.transform = `translate(${dets.clientX - 5}px, ${dets.clientY - 5}px) scale(${xscale}, ${yscale})`
+        // document.querySelector("#miniCircle").style.transform = `translate(${dets.clientX - 5}px, ${dets.clientY - 5}px) scale(${xscale}, ${yscale})`
+        gsap.to('#miniCircle', {
+            x: dets.x,
+            y: dets.y
+        })
     })
 }
 
